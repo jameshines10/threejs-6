@@ -12,18 +12,18 @@ document.body.appendChild(renderer.domElement);
 
 var pyramid = new THREE.CylinderGeometry(0, 20, 30, 4, 1, false);
 
-for(var face in pyramid.faces){
-  if(pyramid.faces[face] instanceof THREE.Face4){
-    pyramid.faces[face].vertexColors[0] = new THREE.Color(0xff0000);
-    pyramid.faces[face].vertexColors[1] = new THREE.Color(0x00ff00);
-    pyramid.faces[face].vertexColors[2] = new THREE.Color(0x0000ff);
-    pyramid.faces[face].vertexColors[3] = new THREE.Color(0xff0000);
-  }  
+for (var face in pyramid.faces) {
+    if (pyramid.faces[face] instanceof THREE.Face4) {
+        pyramid.faces[face].vertexColors[0] = new THREE.Color(0xff0000);
+        pyramid.faces[face].vertexColors[1] = new THREE.Color(0x00ff00);
+        pyramid.faces[face].vertexColors[2] = new THREE.Color(0x0000ff);
+        pyramid.faces[face].vertexColors[3] = new THREE.Color(0xff0000);
+    }e
 }
 
 var pyramidMaterial = new THREE.MeshBasicMaterial({
     vertexColors: THREE.VertexColors,
-})
+});
 
 var cube = new THREE.CubeGeometry(20, 20, 20);
 
